@@ -47,6 +47,13 @@
 			remoteGlobalIDString = EAD1442019E073FB0065A1FF;
 			remoteInfo = Aardvark;
 		};
+		EA7756021C4828B3009C5C92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA4583EB19E654FF00E44882 /* Aardvark.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4551A2C21BDACF9000F216D0;
+			remoteInfo = "Aardvark-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +173,7 @@
 			children = (
 				EA4583F119E654FF00E44882 /* libAardvark.a */,
 				EA4583F319E654FF00E44882 /* AardvarkTests.xctest */,
+				EA7756031C4828B3009C5C92 /* Aardvark.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +273,13 @@
 			fileType = wrapper.cfbundle;
 			path = AardvarkTests.xctest;
 			remoteRef = EA4583F219E654FF00E44882 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EA7756031C4828B3009C5C92 /* Aardvark.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Aardvark.framework;
+			remoteRef = EA7756021C4828B3009C5C92 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -430,7 +445,7 @@
 				);
 				GCC_PREFIX_HEADER = "Other/AardvarkSample-Prefix.pch";
 				INFOPLIST_FILE = AardvarkSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,7 +463,7 @@
 				);
 				GCC_PREFIX_HEADER = "Other/AardvarkSample-Prefix.pch";
 				INFOPLIST_FILE = AardvarkSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
