@@ -246,9 +246,11 @@
     UIImage *screenshot = nil;
     
     @try {
-        UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-        UIGraphicsBeginImageContextWithOptions(window.bounds.size, YES, 0.0);
-        [window.layer renderInContext:UIGraphicsGetCurrentContext()];
+        CGRect const screenBounds = [UIScreen mainScreen].bounds;
+        UIGraphicsBeginImageContextWithOptions(screenBounds.size, NO, 0.0);
+        [[UIApplication sharedApplication].windows enumerateObjectsUsingBlock:^(__kindof UIWindow * _Nonnull window, NSUInteger index, BOOL * _Nonnull stop) {
+            [window drawViewHierarchyInRect:screenBounds afterScreenUpdates:NO];
+        }];
         screenshot = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
